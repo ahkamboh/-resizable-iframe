@@ -1,4 +1,4 @@
-# -resizable-iframe
+# resizable-iframe Without js
 How can I make an iframe/Container resizable? 
 
 ### This can be done in pure CSS, like so:
@@ -10,9 +10,22 @@ iframe {
   overflow: auto;
 }
 ```
+### Definition of resize property 
+The resize property defines if (and how) an element is resizable by the user.
+## $\colorbox{RED}{{\color{white}{Imoprtant Note}}}$
+The resize property does not apply to inline elements or to block elements where overflow="visible". 
+So, make sure that overflow is set to "scroll", "auto", or "hidden".
+###   Important point
++ Default value:	none <br>
++ Inherited:	no<br>
++ Animatable:	no. Read about animatable<br>
++ Version:	CSS3<br>
++ JavaScript syntax:object.style.resize="both"
+
 ## But a few problems occur while resizing the iframe 
 so we can remove it by adding flex properties 
 ```
+<style>
     .resizer {
         display: flex;
         margin: 0;
@@ -22,31 +35,12 @@ so we can remove it by adding flex properties
         overflow: auto;
         margin-bottom: auto;
     }
-
-    .resizer>.resized {
-        flex-grow: 1;
-        margin: 0;
-        padding: 0;
-        border: 0;
-
-    }
-
-    .border {
-        background: rgb(23, 21, 21);
-        border: 1px solid rgb(255, 255, 255);
-    }
-
-    h1 {
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        color: white;
-        text-transform: capitalize;
-        position: relative;
-        top: 19%;
-    }
-</style>
+    .resizer>.resized{flex-grow: 1;}
+    </style>
 <body >
     <h1>iframe resizable</h1>
     <div class="resizer border" >
         <iframe class="resized" src="https://www.youtube.com/embed/AZBtUNzL450"></iframe>
     </div>
-    ```
+    
+    # Thanks for your time here.
