@@ -24,7 +24,8 @@ So, make sure that overflow is set to "scroll", "auto", or "hidden".
 
 ## But a few problems occur while resizing the iframe 
 so we can remove it by adding flex properties 
-```
+
+   ```
 <style>
     .resizer {
         display: flex;
@@ -42,5 +43,7 @@ so we can remove it by adding flex properties
     <div class="resizer border" >
         <iframe class="resized" src="https://www.youtube.com/embed/AZBtUNzL450"></iframe>
     </div>
-    
-    # Thanks for your time here.
+    </body>
+   }
+```
+#  # Thanks for your time here.
