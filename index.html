@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How can I make an iframe resizable?</title>
+    <link rel="icon" href="ahkambohlogo.png">
+</head>
+<style>
+    html {
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+    }
+    body {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        height: 98vh;
+
+
+    }
+
+     @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+} 
+
+    .resizer {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        resize: both;
+        transform: scale(3);
+        overflow: auto;
+        margin-bottom: auto;
+    }
+
+    .resizer>.resized {
+        flex-grow: 1;
+        margin: 0;
+        padding: 0;
+        border: 0;
+
+    }
+
+    .border {
+        background: rgb(23, 21, 21);
+        border: 1px solid rgb(255, 255, 255);
+    }
+
+    h1 {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: white;
+        text-transform: capitalize;
+        position: relative;
+        top: 19%;
+    }
+</style>
+
+<body >
+    <h1>iframe resizable</h1>
+    <div class="resizer border" >
+        <iframe class="resized" src="https://www.youtube.com/embed/AZBtUNzL450"></iframe>
+    </div>
+</body>
+
+</html>
